@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent" android:layout_gravity="center"
+    android:gravity="center" android:layout_margin="10dp"
+    android:orientation="vertical">
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Enter the text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:padding="5dp"
+        android:gravity="center">
+    </TextView>
+    <EditText
+        android:id="@+id/etUserText"
+        android:background="#50000000"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+        <requestFocus />
+    </EditText>
+    </LinearLayout>
+
+
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_width="match_parent" android:orientation="horizontal">
+    <Button
+        android:id="@+id/bTranslateToGerman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="German" />
+
+
+    <Button
+        android:id="@+id/bTranslateToFrench"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="French"/>
+
+    <Button
+        android:id="@+id/bTranslateToRussian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Russian"/>
+
+    <Button
+        android:id="@+id/bTranslateToHindi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hindi"/>
+</LinearLayout>
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent" android:orientation="horizontal">
+    <Button
+        android:id="@+id/bTranslateToItalian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Italian"/>
+
+        <Button
+            android:id="@+id/bTranslateToJapanese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Japanese"/>
+        </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent" android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tvTranslatedText"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/etUserText"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:hint="Translated text"
+        android:textColor="#000000"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/bSpeak"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTranslatedText"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/mic"/>
+</LinearLayout>
