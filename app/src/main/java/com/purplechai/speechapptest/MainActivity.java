@@ -5,7 +5,10 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -26,6 +29,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final DrawerLayout drawerLayout=(DrawerLayout) findViewById(R.id.drawerLayout);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Translate");
+        toolbar.setTitle("Languages");
+        toolbar.setBackgroundColor(getResources().getColor(R.color.primary_dark));
+        toolbar.setNavigationIcon(R.drawable.ic_navigation);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(Gravity.LEFT);
+            }
+        });
 
         speech_output = (TextView) findViewById(R.id.speech_output);
         texttospeech = (Button) findViewById(R.id.texttospeech);
